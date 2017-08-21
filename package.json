@@ -21,21 +21,21 @@
   "author": "Norm MacLennan <nmaclennan@cimpress.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "aws-sdk": "^2.100.0",
+    "aws-sdk": "^2.101.0",
     "es6-promisify": "^5.0.0",
     "lodash": "^4.17.4",
     "ssm-params": "0.0.6"
   },
   "devDependencies": {
     "depcheck": "^0.6.7",
-    "eslint": "^4.1.1",
+    "eslint": "^4.5.0",
     "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-import": "^2.6.1",
-    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "istanbul": "^0.4.5",
-    "mocha": "^3.4.2",
+    "mocha": "^3.5.0",
     "nsp": "^2.7.0",
     "should": "^11.2.1"
   },
