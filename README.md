@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/Cimpress-MCP/metafig.svg?branch=master)](https://travis-ci.org/Cimpress-MCP/metafig)
+[![Code Climate](https://codeclimate.com/github/Cimpress-MCP/metafig/badges/gpa.svg)](https://codeclimate.com/github/Cimpress-MCP/metafig)
+[![Test Coverage](https://codeclimate.com/github/Cimpress-MCP/metafig/badges/coverage.svg)](https://codeclimate.com/github/Cimpress-MCP/metafig/coverage)
+
 ## METAFIG
 
 **Metafig** is a library for loading configuration values from external
