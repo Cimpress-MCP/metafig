@@ -38,5 +38,8 @@
     "mocha": "^3.4.2",
     "nsp": "^2.7.0",
     "should": "^11.2.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
