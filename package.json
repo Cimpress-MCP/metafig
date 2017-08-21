@@ -1,0 +1,42 @@
+{
+  "name": "@cimpresscloud/metafig",
+  "version": "0.1.0",
+  "description": "A configuration file for your configuration file.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint . --fix",
+    "depcheck": "depcheck && npm outdated && npm outdated -D && nsp check",
+    "climate": "docker run -it --rm -e CODECLIMATE_CODE=\"$PWD\" -v \"$PWD\":/code -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/cc:/tmp/cc codeclimate/codeclimate analyze",
+    "test": "istanbul cover --dir reports/istanbul _mocha -- \"tests/{,!(integration)}/*.test.js\" && istanbul check-coverage --statements 65",
+    "integration": "istanbul cover --dir reports/istanbul _mocha -- \"tests/integration/**/*.test.js\" && istanbul check-coverage --statements 65",
+    "preflight": "npm run lint && npm run depcheck && npm test"
+  },
+  "keywords": [
+    "configuration",
+    "config",
+    "param",
+    "ssm",
+    "environment"
+  ],
+  "author": "Norm MacLennan <nmaclennan@cimpress.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "aws-sdk": "^2.100.0",
+    "es6-promisify": "^5.0.0",
+    "lodash": "^4.17.4",
+    "ssm-params": "0.0.6"
+  },
+  "devDependencies": {
+    "depcheck": "^0.6.7",
+    "eslint": "^4.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.4.2",
+    "nsp": "^2.7.0",
+    "should": "^11.2.1"
+  }
+}
