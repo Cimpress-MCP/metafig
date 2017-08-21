@@ -7,8 +7,8 @@
     "lint": "eslint . --fix",
     "depcheck": "depcheck && npm outdated && npm outdated -D && nsp check",
     "climate": "docker run -it --rm -e CODECLIMATE_CODE=\"$PWD\" -v \"$PWD\":/code -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/cc:/tmp/cc codeclimate/codeclimate analyze",
-    "test": "istanbul cover --dir reports/istanbul _mocha -- \"tests/{,!(integration)}/*.test.js\" && istanbul check-coverage --statements 65",
-    "integration": "istanbul cover --dir reports/istanbul _mocha -- \"tests/integration/**/*.test.js\" && istanbul check-coverage --statements 65",
+    "test": "istanbul cover --dir coverage _mocha -- \"tests/{,!(integration)}/*.test.js\" && istanbul check-coverage --statements 65",
+    "integration": "istanbul cover --dir coverage _mocha -- \"tests/integration/**/*.test.js\" && istanbul check-coverage --statements 65",
     "preflight": "npm run lint && npm run depcheck && npm test"
   },
   "keywords": [
