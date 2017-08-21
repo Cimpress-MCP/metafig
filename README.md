@@ -18,6 +18,12 @@ While we migrated most of them to the Parameter store, we wanted to:
     * There are a few things that make more sense as environment variables.
 2. Make it easier to migrate in the future if we change our mind.
 
+### Installing
+
+```bash
+npm install --save @cimpresscloud/metafig
+```
+
 ### Example
 
 `./config.json`
