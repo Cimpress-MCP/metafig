@@ -12,10 +12,11 @@ methods. Some used S3 before lambda had encryption helpers for environment
 variables. Some used environment variables. Some used the Parameter Store.
 
 While we migrated most of them to the Parameter store, we wanted to:
-    1. Make it easier to mix-and-match
-        * We had a few things too big for the Parameter Store
-        * There are a few things that make more sense as environment variables.
-    2. Make it easier to migrate in the future if we change our mind.
+
+1. Make it easier to mix-and-match
+    * We had a few things too big for the Parameter Store
+    * There are a few things that make more sense as environment variables.
+2. Make it easier to migrate in the future if we change our mind.
 
 ### Example
 
