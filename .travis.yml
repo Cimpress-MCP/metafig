@@ -29,6 +29,7 @@ jobs:
         - echo "Deploying to npm ..."
       deploy:
         provider: npm
+        email: norm.maclennan@gmail.com
         api_key: $NPM_API_KEY
         on:
           tags: true
