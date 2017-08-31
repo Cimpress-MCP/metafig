@@ -102,4 +102,27 @@ describe('Metafig', () => {
         err.message.should.eql('No environment variable: RDS_HOSTNAME!');
       });
   });
+
+  it('should not mutate the object passed in', () => {
+    const file = {
+      plugins: {
+        database: {
+          environment: {
+            hostname: 'TEST_1'
+          }
+        }
+      }
+    };
+
+    return metafig(file)
+      .then(config => {
+        config.plugins.database.hostname.should.eql('test value one');
+        file.plugins.database.environment.hostname.should.eql('TEST_1');
+        return metafig(file);
+      })
+      .then(config => {
+        config.plugins.database.hostname.should.eql('test value one');
+        file.plugins.database.environment.hostname.should.eql('TEST_1');
+      });
+  });
 });

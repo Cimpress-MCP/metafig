@@ -63,11 +63,12 @@ function loadAllFromTarget (config, target) {
 }
 
 module.exports = (config, target = 'plugins') => {
-  return Promise.all(loadAllFromTarget(config, target))
+  let hydratedConfig = _.clone(config);
+  return Promise.all(loadAllFromTarget(hydratedConfig, target))
     .then(values => {
       values = arrayToObject(values);
-      _.set(config, target, values);
+      _.set(hydratedConfig, target, values);
 
-      return config;
+      return hydratedConfig;
     });
 };
