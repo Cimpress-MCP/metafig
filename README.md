@@ -2,6 +2,12 @@
 [![Code Climate](https://codeclimate.com/github/Cimpress-MCP/metafig/badges/gpa.svg)](https://codeclimate.com/github/Cimpress-MCP/metafig)
 [![Test Coverage](https://codeclimate.com/github/Cimpress-MCP/metafig/badges/coverage.svg)](https://codeclimate.com/github/Cimpress-MCP/metafig/coverage)
 
+[![dependencies Status](https://david-dm.org/Cimpress-MCP/metafig/status.svg)](https://david-dm.org/Cimpress-MCP/metafig)
+[![devDependencies Status](https://david-dm.org/Cimpress-MCP/metafig/dev-status.svg)](https://david-dm.org/Cimpress-MCP/metafig?type=dev)
+
+[![npm (scoped)](https://img.shields.io/npm/v/@cimpresscloud/metafig.svg)](https://www.npmjs.com/package/@cimpresscloud/metafig)
+[![npm](https://img.shields.io/npm/dt/@cimpresscloud/metafig.svg)]()
+
 ## METAFIG
 
 **Metafig** is a library for loading configuration values from external
