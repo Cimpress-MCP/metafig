@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint . --fix",
-    "depcheck": "depcheck && nsp check && (npm outdated || true)",
+    "depcheck": "depcheck && (npm outdated || true)",
     "climate": "docker run -it --rm -e CODECLIMATE_CODE=\"$PWD\" -v \"$PWD\":/code -v /var/run/docker.sock:/var/run/docker.sock -v /tmp/cc:/tmp/cc codeclimate/codeclimate analyze",
     "test": "istanbul cover --dir coverage _mocha -- \"tests/{,!(integration)}/*.test.js\" && istanbul check-coverage --statements 65",
     "integration": "istanbul cover --dir coverage _mocha -- \"tests/integration/**/*.test.js\" && istanbul check-coverage --statements 65",
@@ -21,14 +21,14 @@
   "author": "Norm MacLennan <nmaclennan@cimpress.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "aws-sdk": "^2.217.1",
+    "aws-sdk": "^2.406.0",
     "es6-promisify": "^6.0.0",
-    "lodash": "^4.17.5",
+    "lodash": "^4.17.11",
     "ssm-params": "0.0.7"
   },
   "devDependencies": {
-    "depcheck": "^0.6.9",
-    "eslint": "^4.19.1",
+    "depcheck": "^0.7.1",
+    "eslint": "^5.14.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-node": "^6.0.0",
@@ -36,7 +36,6 @@
     "eslint-plugin-standard": "^3.0.1",
     "istanbul": "^0.4.5",
     "mocha": "^5.0.0",
-    "nsp": "^3.0.0",
     "should": "^13.2.1"
   },
   "publishConfig": {
