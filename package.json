@@ -1,6 +1,6 @@
 {
   "name": "@cimpresscloud/metafig",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A configuration file for your configuration file.",
   "main": "index.js",
   "scripts": {
