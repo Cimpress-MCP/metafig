@@ -23,7 +23,7 @@
   "dependencies": {
     "aws-sdk": "^2.406.0",
     "es6-promisify": "^6.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.20",
     "ssm-params": "0.0.7"
   },
   "devDependencies": {
