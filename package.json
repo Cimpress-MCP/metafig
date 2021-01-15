@@ -21,7 +21,7 @@
   "author": "Norm MacLennan <nmaclennan@cimpress.com>",
   "license": "Apache-2.0",
   "dependencies": {
-    "aws-sdk": "^2.406.0",
+    "aws-sdk": "^2.814.0",
     "es6-promisify": "^6.0.0",
     "lodash": "^4.17.15",
     "ssm-params": "0.0.7"
