@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "14"
+  - 14
 
 env:
   global:
@@ -12,7 +12,6 @@ script:
 jobs:
   include:
     - stage: test coverage
-      node_js: "7"
       before_script:
         - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
         - chmod +x ./cc-test-reporter
@@ -22,7 +21,6 @@ jobs:
         - if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT -t lcov; fi
         
     - stage: npm release
-      node_js: "7"
       script:
         - echo "Deploying to npm ..."
       deploy:
