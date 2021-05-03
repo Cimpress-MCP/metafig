@@ -1,5 +1,5 @@
 'use strict';
-const {getSettingsFromProvider} = require('./lib/providers'),
+const { getSettingsFromProvider } = require('./lib/providers'),
   _ = require('lodash');
 
 /**
@@ -14,7 +14,7 @@ const {getSettingsFromProvider} = require('./lib/providers'),
  */
 function arrayToObject (array) {
   return array.reduce(function (acc, x) {
-    for (var key in x) acc[key] = x[key];
+    for (const key in x) acc[key] = x[key];
     return acc;
   }, {});
 }
@@ -37,7 +37,7 @@ function loadPluginConfig (plugin, settings) {
 
   return Promise.all(loadingTasks)
     .then(loadedSettings => {
-      return {[plugin]: arrayToObject(loadedSettings)};
+      return { [plugin]: arrayToObject(loadedSettings) };
     });
 }
 
@@ -52,7 +52,7 @@ function loadPluginConfig (plugin, settings) {
  * @param {string} target - The path to the key in your config to be hydrated (e.g. 'a.b[0].c')
  */
 function loadAllFromTarget (config, target) {
-  let configLoaders = [];
+  const configLoaders = [];
   const targetObj = _.get(config, target, {});
 
   Object.keys(targetObj).forEach((plugin) => {
@@ -63,7 +63,7 @@ function loadAllFromTarget (config, target) {
 }
 
 module.exports = (config, target = 'plugins') => {
-  let hydratedConfig = _.clone(config);
+  const hydratedConfig = _.clone(config);
   return Promise.all(loadAllFromTarget(hydratedConfig, target))
     .then(values => {
       values = arrayToObject(values);
